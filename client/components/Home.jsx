@@ -15,7 +15,6 @@ class Home extends React.Component {
 
   submitHandler = event => {
     event.preventDefault()
-    console.log(this.props.dispatch)
     this.props.dispatch(getMovies(this.state.title))
   }
   render () {
