@@ -1,4 +1,4 @@
-import api from './api/movies'
+import * as api from '../api/movies'
 
 export const GET_MOVIES_SUCCESS = 'GET_MOVIES_SUCCESS'
 
