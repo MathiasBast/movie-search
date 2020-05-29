@@ -12,7 +12,8 @@ export function getMoviesSuccess (movies) {
 export function getMovies (name) {
   return dispatch => {
     return api.getMovies(name)
-      .then(movies => {
+      .then(res => {
+        const movies = JSON.parse(res.text)
         dispatch(getMoviesSuccess(movies))
       })
   }
