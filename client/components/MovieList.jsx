@@ -5,7 +5,6 @@ class MovieList extends React.Component {
   render () {
     return (
     <>
-    {console.log(this.props.movies)}
       {this.props.movies.length !== 0
         ? <>
         {this.props.movies.Search.map(movie => {

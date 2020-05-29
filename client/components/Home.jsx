@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { getMovies } from '../actions/movies'
+import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
   state={
@@ -14,7 +15,6 @@ class Home extends React.Component {
   }
 
   submitHandler = event => {
-    event.preventDefault()
     this.props.dispatch(getMovies(this.state.title))
   }
   render () {
@@ -22,7 +22,9 @@ class Home extends React.Component {
       <>
       <form>
         <input placeholder='movie title' value={this.state.title} onChange={this.titleHandler} />
-        <button type='button' onClick={this.submitHandler} >Submit</button>
+        <Link to='/search'>
+          <button type='button' onClick={this.submitHandler} >Submit</button>
+        </Link>
       </form>
       </>
     )
