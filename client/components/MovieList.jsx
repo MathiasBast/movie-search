@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 class MovieList extends React.Component {
   render () {
     return (
     <>
+      {this.props.movies.Error !== 'Movie not found!'
+        ? <>
       {this.props.movies.length !== 0
         ? <>
         {this.props.movies.Search.map(movie => {
@@ -16,7 +19,8 @@ class MovieList extends React.Component {
         })}
         </>
 
-        : <h2>Search A Movie</h2>}
+        : <Redirect to='/' />}</>
+        : <p>No Movie Found</p> }
     </>
     )
   }
