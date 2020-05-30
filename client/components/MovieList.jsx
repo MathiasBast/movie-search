@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 class MovieList extends React.Component {
-
   MovieChecker (res) {
     if (res.Response === 'False') {
       if (res.Error === 'Movie not found!') {
@@ -12,7 +11,6 @@ class MovieList extends React.Component {
         return <h1>Too many resluts to show</h1>
       }
     } else if (res.length !== 0) {
-      console.log(this.props.movies)
       return this.props.movies.Search.map(movie => {
         return <div key={movie.imbdId}>
           <h2>{movie.Title}</h2>
@@ -21,6 +19,7 @@ class MovieList extends React.Component {
         </div>
       })
     } else {
+      /* eslint-disable-line */
       <Redirect to='/' />
     }
   }
