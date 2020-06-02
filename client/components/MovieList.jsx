@@ -16,7 +16,10 @@ class MovieList extends React.Component {
         return <div className='movie-display' key={movie.imbdId}>
           <h2>{movie.Title}</h2>
           <p>{movie.Year}</p>
-          <img className='movie-image' src={movie.Poster} alt={movie.Title} />
+          {movie.Poster === 'N/A'
+            ? <img className='movie-image' src='/pictures/NoFound.jpg' alt={movie.Title} />
+            : <img className='movie-image' src={movie.Poster} alt={movie.Title} />
+          }
         </div>
       })
     } else {
