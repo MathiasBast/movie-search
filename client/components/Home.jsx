@@ -15,14 +15,22 @@ class Home extends React.Component {
   }
 
   submitHandler = event => {
+    event.preventDefault()
     this.props.dispatch(getMovies(this.state.title))
+  }
+
+  keyHandler = event => {
+    event.preventDefault()
+    if (event.keyCode === 13) {
+      this.props.dispatch(getMovies(this.state.title))
+    }
   }
   render () {
     return (
       <>
         <div className='home-center'>
           <form>
-            <input placeholder='movie title' value={this.state.title} onChange={this.titleHandler} />
+            <input onKeyUp={this.keyHandler} placeholder='movie title' value={this.state.title} onChange={this.titleHandler} />
             <Link to='/search'>
               <button type='button' onClick={this.submitHandler} >Submit</button>
             </Link>
