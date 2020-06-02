@@ -27,7 +27,9 @@ class MovieList extends React.Component {
   render () {
     return (
     <>
-      {this.MovieChecker(this.props.movies)}
+      <div className='container'>
+        {this.MovieChecker(this.props.movies)}
+      </div>
     </>
     )
   }
