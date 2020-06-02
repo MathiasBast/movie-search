@@ -20,13 +20,15 @@ class Home extends React.Component {
   render () {
     return (
       <>
-        <form>
-          <input placeholder='movie title' value={this.state.title} onChange={this.titleHandler} />
-          <Link to='/search'>
-            <button type='button' onClick={this.submitHandler} >Submit</button>
-          </Link>
-        </form>
-        <h2>Search A Movie</h2>
+        <div className='home-center'>
+          <form>
+            <input placeholder='movie title' value={this.state.title} onChange={this.titleHandler} />
+            <Link to='/search'>
+              <button type='button' onClick={this.submitHandler} >Submit</button>
+            </Link>
+          </form>
+          <h2>Search A Movie</h2>
+        </div>
       </>
     )
   }
