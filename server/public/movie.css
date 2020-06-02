@@ -3,6 +3,16 @@ body{
 }
 
 .movie-display{
-  width: 400px;
+  width: 300px;
   height: 400px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.movie-image{
+  height: 300px;
+  width: auto;
+  margin: 0 auto 0 auto;
 }
