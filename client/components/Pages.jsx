@@ -27,7 +27,9 @@ class Pages extends React.Component {
   render () {
     return (
       <>
-        {this.pages(this.props.movies.totalResults)}
+        <div className='page-numbers' >
+          {this.pages(this.props.movies.totalResults)}
+        </div>
       </>
     )
   }
