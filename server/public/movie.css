@@ -12,8 +12,8 @@ body{
 }
 
 .movie-image{
-  height: 300px;
-  width: auto;
+  width: 220px;
+  height: auto;
   margin: 0 auto 0 auto;
 }
 
@@ -30,6 +30,7 @@ body{
 .page-numbers{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 20px 0px 20px 0px;
 }
 
