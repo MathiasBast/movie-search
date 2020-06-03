@@ -17,6 +17,15 @@ export function movieName (name) {
   }
 }
 
+export function getMoviePage (page, movie) {
+  return dispatch => {
+    return api.getMoviePage(page, movie)
+      .then(res => {
+        console.log(res)
+      })
+  }
+}
+
 export function getMovies (name) {
   return dispatch => {
     return api.getMovies(name)

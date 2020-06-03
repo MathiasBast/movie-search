@@ -20,6 +20,7 @@ class Pages extends React.Component {
   clickHandler = event => {
     const number = event.target.innerHTML
     console.log(event.target.innerHTML)
+    
   }
 
   render () {
