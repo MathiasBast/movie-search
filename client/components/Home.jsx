@@ -25,6 +25,7 @@ class Home extends React.Component {
     event.preventDefault()
     if (event.keyCode === 13) {
       this.props.dispatch(getMovies(this.state.title))
+      // eslint-disable-next-line semi
       this.props.dispatch(movieName(this.state.title));
       this.setState({ search: true })
     }

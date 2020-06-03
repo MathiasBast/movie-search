@@ -21,7 +21,8 @@ export function getMoviePage (page, movie) {
   return dispatch => {
     return api.getMoviePage(page, movie)
       .then(res => {
-        console.log(res)
+        const movies = JSON.parse(res.text)
+        dispatch(getMoviesSuccess(movies))
       })
   }
 }

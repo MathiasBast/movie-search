@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { getMoviePage } from '../actions/movies'
+
 class Pages extends React.Component {
   pages (number) {
     number = Number(number)
@@ -19,8 +21,7 @@ class Pages extends React.Component {
 
   clickHandler = event => {
     const number = event.target.innerHTML
-    console.log(event.target.innerHTML)
-    
+    this.props.dispatch(getMoviePage(number, this.props.name))
   }
 
   render () {
