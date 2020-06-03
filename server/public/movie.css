@@ -26,3 +26,9 @@ body{
 .home-center{
   text-align: center;
 }
+
+.page-numbers{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+}
