@@ -13,7 +13,7 @@ class Pages extends React.Component {
       var final = []
       const pages = Math.ceil(number / 10)
       for (let i = 0; i < pages; i++) {
-        final.push(<button key={i} onClick={this.clickHandler}>{i + 1}</button>)
+        final.push(<button className='page-buttons' key={i} onClick={this.clickHandler}>{i + 1}</button>)
       }
       return final
     }

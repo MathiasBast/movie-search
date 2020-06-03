@@ -32,3 +32,8 @@ body{
   justify-content: center;
   margin: 20px 0px 20px 0px;
 }
+
+.page-buttons{
+  font-size: 20px;
+  margin: 2px;
+}
