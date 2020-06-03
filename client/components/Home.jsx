@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { getMovies } from '../actions/movies'
+import { getMovies, movieName } from '../actions/movies'
 import { Link, Redirect } from 'react-router-dom'
 
 class Home extends React.Component {
@@ -18,12 +18,14 @@ class Home extends React.Component {
   submitHandler = event => {
     event.preventDefault()
     this.props.dispatch(getMovies(this.state.title))
+    this.props.dispatch(movieName(this.state.title))
   }
 
   keyHandler = event => {
     event.preventDefault()
     if (event.keyCode === 13) {
-      this.props.dispatch(getMovies(this.state.title));
+      this.props.dispatch(getMovies(this.state.title))
+      this.props.dispatch(movieName(this.state.title));
       this.setState({ search: true })
     }
   }
