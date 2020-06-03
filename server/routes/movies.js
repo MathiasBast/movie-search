@@ -10,4 +10,10 @@ router.get('/movie/:title', (req, res) => {
     })
 })
 
+router.get('/page/:page/:movie', (req, res) => {
+  const movie = req.params.movie
+  const page = req.params.page
+  return request.get(`http://omdbapi.com/?apikey=69495595&s=${movie}&page=${page}`)
+})
+
 module.exports = router
